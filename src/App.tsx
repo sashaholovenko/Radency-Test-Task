@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import ProductList from "./components/ProductList";
+import AppInfo from "./components/app-info/AppInfo";
+import MainPage from "./pages/MainPage";
+import {BrowserRouter, Route} from "react-router-dom";
+import About from "./pages/About";
+import Test from "./pages/Test";
+import ProductItemPage from "./pages/ProductItemPage";
+import {DbContext} from './context'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [dbChanged, setDbChanged] = useState<boolean>(false)
+
+
+  // @ts-ignore
+    return (
+      <DbContext.Provider value={{
+          dbChanged,
+          setDbChanged
+      }
+      }>
+      <BrowserRouter>
+          <div>
+              <Route path={'/'} exact>
+                <MainPage />
+              </Route>
+              <Route path={'/test'} exact>
+                <Test />
+              </Route>
+              <Route path={'/product/:id'} exact>
+                  <ProductItemPage />
+              </Route>
+          </div>
+      </BrowserRouter>
+      </DbContext.Provider>
   );
 }
 

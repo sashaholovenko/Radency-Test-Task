@@ -1,0 +1,105 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "imageUrl": "some url here",
+      "name": "Product W",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "id": 2,
+      "imageUrl": "some url here",
+      "name": "Product C",
+      "count": 2,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "name": "SAD",
+      "count": 13,
+      "size": {
+        "width": 123,
+        "height": 123
+      },
+      "comments": [],
+      "id": 3
+    },
+    {
+      "name": "Product name",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ],
+      "id": 4
+    },
+    {
+      "id": 5,
+      "imageUrl": "some url here",
+      "name": "Product B",
+      "count": 3,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "name": "Z",
+      "size": {},
+      "comments": [],
+      "id": 6
+    },
+    {
+      "id": 8,
+      "imageUrl": "some url here",
+      "name": "Product J",
+      "count": 6,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "200g",
+      "comments": [
+        "CommentModel",
+        "CommentModel"
+      ]
+    },
+    {
+      "name": "sajdas",
+      "count": 123,
+      "size": {
+        "width": 123,
+        "height": 123
+      },
+      "weight": 123,
+      "comments": [],
+      "id": 9
+    }
+  ]
+}

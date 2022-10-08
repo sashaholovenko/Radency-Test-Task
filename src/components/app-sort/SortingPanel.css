@@ -1,0 +1,12 @@
+.sort__panel {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+/*.sort__panel select {*/
+/*    height: 20px;*/
+/*}*/

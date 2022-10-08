@@ -1,0 +1,54 @@
+.modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.modal__content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.add__btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+    width: 200px;
+}
+.btn {
+    width: 80px;
+    height: 30px;
+    font-size: larger;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.green {
+    background-color: rgba(143,255,125,0.69)
+}
+.red {
+    background-color: rgba(255,77,74,0.69)
+}
