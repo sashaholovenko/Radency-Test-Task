@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, useEffect, useRef, useState} from 'react';
+import React, {Dispatch, SetStateAction, useEffect, useLayoutEffect, useRef, useState} from 'react';
 import './EditModal.css'
 import {UserActionsTypes, Users} from "../../types/user";
 import {useDispatch} from "react-redux";
@@ -25,13 +25,16 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
     const {users} = useTypedSelector(state => state.user)
     const dispatch = useDispatch()
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+            console.log(product)
             setName(product?.name)
             setCount(product?.count)
             setWidth(product?.size.width)
             setHeight(product?.size.height)
             setWeight(product?.weight)
-    }, [])
+    }, [product])
+    console.log(product)
+
 
     const editProduct = async () => {
 
@@ -54,7 +57,6 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
             // setHeight(0)
             setActive(false)
             setDbChanged(!dbChanged)
-            // console.log(dbChanged)
         })
 
     }
