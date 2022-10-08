@@ -3,14 +3,12 @@ import {useDispatch, useSelector} from "react-redux";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {fetchUsers} from "../../store/action-creators/products";
 import {Simulate} from "react-dom/test-utils";
-import load = Simulate.load;
-import {Row} from "react-bootstrap";
 import ProductItem from "./ProductItem";
 import DeleteModal from "../modals/DeleteModal";
 import './ProductList.css'
 import AddModal from "../modals/AddModal";
 import SortingPanel from "../app-sort/SortingPanel";
-import {Users} from "../../types/user";
+import {Products} from "../../types/product";
 import {useHistory} from "react-router-dom";
 import {DbContext} from "../../context";
 
@@ -24,7 +22,7 @@ const ProductList: React.FC = () => {
     const history = useHistory()
     const {dbChanged, setDbChanged} = useContext(DbContext)
 
-    const {users, loading, error} = useTypedSelector(state => state.user)
+    const {products, loading, error} = useTypedSelector(state => state.product)
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -41,9 +39,9 @@ const ProductList: React.FC = () => {
     }
 
     if ( sortOption === "alphabet") {
-         users.sort((x: Users, y:Users) => x.name.localeCompare(y.name));
+         products.sort((x: Products, y:Products) => x.name.localeCompare(y.name));
     } else {
-         users.sort((a: Users, b:Users) => ((a.count)) - (b.count));
+         products.sort((a: Products, b:Products) => ((a.count)) - (b.count));
     }
 
 
@@ -51,13 +49,13 @@ const ProductList: React.FC = () => {
 
     <div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-around" }}>
             <SortingPanel sortOption={sortOption} setSortOption={setSortOption}/>
-            {users.map( (user, index) =>
-                <ProductItem key={user.id}
-                             product={user}
+            {products.map( (product, index) =>
+                <ProductItem key={product.id}
+                             product={product}
                              setDeleteModalActive={setDeleteModalActive}
                              setItemToDelete={setItemToDelete}
                              index={index}
-                             onRoute={() => history.push('/product/' + user.id)}
+                             onRoute={() => history.push('/product/' + product.id)}
                 />
             )}
             <button

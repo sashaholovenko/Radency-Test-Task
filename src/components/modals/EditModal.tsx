@@ -1,6 +1,6 @@
 import React, {Dispatch, SetStateAction, useEffect, useLayoutEffect, useRef, useState} from 'react';
 import './EditModal.css'
-import {UserActionsTypes, Users} from "../../types/user";
+import {Products} from "../../types/product";
 import {useDispatch} from "react-redux";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import axios from "axios";
@@ -10,7 +10,7 @@ interface AddModalProps {
     setActive: Dispatch<SetStateAction<boolean>>,
     dbChanged: boolean,
     setDbChanged: Dispatch<SetStateAction<boolean>>,
-    product: Users | null
+    product: Products | null
 }
 
 const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbChanged, product}) => {
@@ -22,7 +22,7 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
     const [productWeight, setWeight] = useState<number>()
     const [productComments, setComments] = useState([])
 
-    const {users} = useTypedSelector(state => state.user)
+    const {products} = useTypedSelector(state => state.product)
     const dispatch = useDispatch()
 
     useLayoutEffect(() => {

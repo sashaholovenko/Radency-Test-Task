@@ -1,7 +1,5 @@
 import React, {Dispatch, FC, SetStateAction} from 'react';
 import './DeleteModal.css'
-import {useDispatch} from "react-redux";
-import {UserActionsTypes} from "../../types/user";
 import axios from "axios";
 
 interface AddModalProps {

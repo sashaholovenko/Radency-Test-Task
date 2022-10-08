@@ -1,6 +1,5 @@
 import React, {Dispatch, SetStateAction, useRef, useState} from 'react';
 import './AddModal.css'
-import {UserActionsTypes} from "../../types/user";
 import {useDispatch} from "react-redux";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import axios from "axios";
@@ -21,7 +20,7 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
     const [productWeight, setWeight] = useState<number>(0)
     const [productComments, setComments] = useState<string[]>([])
 
-    const {users} = useTypedSelector(state => state.user)
+    const {products} = useTypedSelector(state => state.product)
     const dispatch = useDispatch()
 
     const createProduct = async () => {

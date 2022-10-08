@@ -1,9 +1,9 @@
 import React, {Dispatch, SetStateAction} from 'react';
-import {Users} from "../../types/user";
+import {Products} from "../../types/product";
 import './ProductItem.css'
 
 interface ProductProps {
-    product: Users,
+    product: Products,
     setDeleteModalActive: Dispatch<SetStateAction<boolean>>,
     setItemToDelete: Dispatch<SetStateAction<number | null>>,
     index: number,

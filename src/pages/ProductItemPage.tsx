@@ -1,6 +1,6 @@
 import React, {Dispatch, SetStateAction, useContext, useEffect, useState} from 'react';
 import {useParams, useHistory} from 'react-router-dom'
-import {Users} from "../types/user";
+import {Products} from "../types/product";
 import axios from "axios";
 import './ProductsItemPage.css'
 import EditModal from "../components/modals/EditModal";
@@ -16,7 +16,7 @@ interface ProductItemPageProps {
 
 const ProductItemPage: React.FC = () => {
 
-    const [product, setProduct] = useState<Users | null>(null)
+    const [product, setProduct] = useState<Products | null>(null)
     const [editModalStatus, setEditModalStatus] = useState<boolean>(false)
     const params = useParams<UserItemPageParams>()
     const history = useHistory()
