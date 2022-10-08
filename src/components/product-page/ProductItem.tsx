@@ -22,7 +22,13 @@ const ProductItem: React.FC<ProductProps> = (props) => {
             }}>
             <h4>{props.index + 1}: {props.product.name}</h4>
             <p>Count: {props.product.count}</p>
-            <button className="btns" onClick={() => props.setDeleteModalActive(true) }>Delete</button>
+            <button className="btns" onClick={(e) => {
+                props.setDeleteModalActive(true)
+                props.setItemToDelete(props.product.id)
+                e.stopPropagation()
+            }
+            }>Delete</button>
+
         </div>
     );
 };

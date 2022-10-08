@@ -25,9 +25,7 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
     const dispatch = useDispatch()
 
     const createProduct = async () => {
-        // if ( productName !== false && productCount !== false && productWidth !== false && productHeight !== false) {
-        //
-        // }
+
         const product = {
             name: productName,
             count: productCount,
@@ -40,8 +38,7 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
 
         }
         console.log(product)
-        // UserActionsTypes.ADD_PRODUCT
-        // dispatch({type: UserActionsTypes.ADD_PRODUCT, payload: product})
+
         await axios.post('http://localhost:3000/products', product).then(respone => {
             setName('')
             setCount(0)

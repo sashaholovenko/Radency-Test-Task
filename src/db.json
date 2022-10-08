@@ -16,21 +16,6 @@
       ]
     },
     {
-      "id": 2,
-      "imageUrl": "some url here",
-      "name": "Product C",
-      "count": 2,
-      "size": {
-        "width": 200,
-        "height": 200
-      },
-      "weight": "200g",
-      "comments": [
-        "CommentModel",
-        "CommentModel"
-      ]
-    },
-    {
       "name": "SAD",
       "count": 13,
       "size": {
@@ -55,36 +40,10 @@
       "id": 4
     },
     {
-      "id": 5,
-      "imageUrl": "some url here",
-      "name": "Product B",
-      "count": 3,
-      "size": {
-        "width": 200,
-        "height": 200
-      },
-      "weight": "200g",
-      "comments": [
-        "CommentModel",
-        "CommentModel"
-      ]
-    },
-    {
       "name": "Z",
       "size": {},
       "comments": [],
       "id": 6
-    },
-    {
-      "name": "Product J-JZ",
-      "count": 6,
-      "size": {
-        "width": 200,
-        "height": 200
-      },
-      "weight": "200g",
-      "comments": [],
-      "id": 8
     },
     {
       "name": "sajdas",
@@ -96,6 +55,17 @@
       "weight": 123,
       "comments": [],
       "id": 9
+    },
+    {
+      "name": "",
+      "count": 123,
+      "size": {
+        "width": 123,
+        "height": 0
+      },
+      "weight": 123,
+      "comments": [],
+      "id": 10
     }
   ]
 }

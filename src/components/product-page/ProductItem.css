@@ -16,3 +16,7 @@
     background-color: rgba(255,38,0,0.64);
 
 }
+
+.btns:hover {
+    transform: scale(1.05);
+}
