@@ -16,16 +16,16 @@ interface AddModalProps {
 const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbChanged, product}) => {
 
     const [productName, setName] = useState<string>()
-    const [productCount, setCount] = useState<number>()
-    const [productWidth, setWidth] = useState<number>()
-    const [productHeight, setHeight] = useState<number>()
-    const [productWeight, setWeight] = useState<number>()
+    const [productCount, setCount] = useState<number | string>()
+    const [productWidth, setWidth] = useState<number | string>()
+    const [productHeight, setHeight] = useState<number | string>()
+    const [productWeight, setWeight] = useState<number | string>()
     const [productComments, setComments] = useState([])
 
     const {products} = useTypedSelector(state => state.product)
     const dispatch = useDispatch()
 
-    useLayoutEffect(() => {
+    useEffect(() => {
             console.log(product)
             setName(product?.name)
             setCount(product?.count)
@@ -33,7 +33,6 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
             setHeight(product?.size.height)
             setWeight(product?.weight)
     }, [product])
-    console.log(product)
 
 
     const editProduct = async () => {
@@ -83,7 +82,7 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
                             <h3>Count</h3>
                             <input type="number"
                                    // placeholder="Count"
-                                   onChange={(e) => setCount(Number(e.target.value))}
+                                   onChange={(e) => setCount((e.target.value))}
                                    value={productCount}
                             />
 
@@ -92,12 +91,12 @@ const AddModal: React.FC<AddModalProps> = ({active, setActive,dbChanged, setDbCh
                             <h3 >Size</h3>
                             <input type="number"
                                    // placeholder="width"
-                                   onChange={(e) => setWidth(Number(e.target.value))}
+                                   onChange={(e) => setWidth((e.target.value))}
                                    value={productWidth}
                             />
                             <input type="number"
                                    // placeholder="height"
-                                   onChange={(e) => setHeight(Number(e.target.value))}
+                                   onChange={(e) => setHeight((e.target.value))}
                                    value={productHeight}
                             />
                         </div>

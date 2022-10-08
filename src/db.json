@@ -26,7 +26,8 @@
       "id": 3
     },
     {
-      "name": "Z",
+      "name": "UA",
+      "count": "21",
       "size": {},
       "comments": [],
       "id": 6
@@ -76,13 +77,13 @@
       "id": 12
     },
     {
-      "name": "MMMM",
-      "count": 123,
+      "name": "asdasd",
+      "count": "213123",
       "size": {
-        "width": 0,
-        "height": 0
+        "width": "",
+        "height": ""
       },
-      "weight": 0,
+      "weight": "",
       "comments": [],
       "id": 13
     }
