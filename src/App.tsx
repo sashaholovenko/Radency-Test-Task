@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import ProductList from "./components/ProductList";
+import ProductList from "./components/product-page/ProductList";
 import AppInfo from "./components/app-info/AppInfo";
 import MainPage from "./pages/MainPage";
 import {BrowserRouter, Route} from "react-router-dom";

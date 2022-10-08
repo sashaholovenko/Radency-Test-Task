@@ -76,19 +76,15 @@
       "id": 6
     },
     {
-      "id": 8,
-      "imageUrl": "some url here",
-      "name": "Product J",
+      "name": "Product J-JZ",
       "count": 6,
       "size": {
         "width": 200,
         "height": 200
       },
       "weight": "200g",
-      "comments": [
-        "CommentModel",
-        "CommentModel"
-      ]
+      "comments": [],
+      "id": 8
     },
     {
       "name": "sajdas",

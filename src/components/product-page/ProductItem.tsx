@@ -1,5 +1,6 @@
 import React, {Dispatch, SetStateAction} from 'react';
-import {Users} from "../types/user";
+import {Users} from "../../types/user";
+import './ProductItem.css'
 
 interface ProductProps {
     product: Users,
@@ -13,14 +14,15 @@ const ProductItem: React.FC<ProductProps> = (props) => {
 
 
     return (
-        <div style={{backgroundColor: "whitesmoke", marginRight: 10, marginTop: 20, height: 100, width: "20%"}}
+        <div className="item"
 
             onClick={() => {
                 props.setItemToDelete(props.product.id)
                 props.onRoute()
             }}>
-            {props.index + 1}: {props.product.name}
-            <button onClick={() => props.setDeleteModalActive(true) }>Delete</button>
+            <h4>{props.index + 1}: {props.product.name}</h4>
+            <p>Count: {props.product.count}</p>
+            <button className="btns" onClick={() => props.setDeleteModalActive(true) }>Delete</button>
         </div>
     );
 };

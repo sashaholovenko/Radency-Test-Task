@@ -1,18 +1,18 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {useTypedSelector} from "../hooks/useTypedSelector";
-import {fetchUsers} from "../store/action-creators/products";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {fetchUsers} from "../../store/action-creators/products";
 import {Simulate} from "react-dom/test-utils";
 import load = Simulate.load;
 import {Row} from "react-bootstrap";
 import ProductItem from "./ProductItem";
-import DeleteModal from "./modals/DeleteModal";
+import DeleteModal from "../modals/DeleteModal";
 import './ProductList.css'
-import AddModal from "./modals/AddModal";
-import SortingPanel from "./app-sort/SortingPanel";
-import {Users} from "../types/user";
+import AddModal from "../modals/AddModal";
+import SortingPanel from "../app-sort/SortingPanel";
+import {Users} from "../../types/user";
 import {useHistory} from "react-router-dom";
-import {DbContext} from "../context";
+import {DbContext} from "../../context";
 
 
 const ProductList: React.FC = () => {
